@@ -1,0 +1,15 @@
+body, html, p, h3 {
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper {
+    text-align: center;
+   
+}
+
+.tovar {
+    font-size: 18px;
+    color: rgb(35, 7, 112);
+    margin: 10px;
+}
