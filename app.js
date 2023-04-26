@@ -11,5 +11,5 @@ server.set('views', __dirname + '/views');
 server.use(express.static(__dirname + '/public'));
 
 server.use('/user', userRouter);
-
+// kjgjui
 server.listen(3000);
