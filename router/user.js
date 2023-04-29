@@ -2,7 +2,9 @@ const express = require('express');
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
+router.get('/:id', (req, res) => {
+    console.log('req.params.id',req.params.id);
+    console.log('req.query', req.query);
     res.render('index');
 });
 
@@ -14,7 +16,7 @@ const tovar =[
     {id : 5, name : 'капуста', massa : 1, price : 8}
 ];
 
-router.get('/tovar', (req, res) => {
+router.get('/:id/tovar', (req, res) => {
     res.json(tovar);
 });
 
