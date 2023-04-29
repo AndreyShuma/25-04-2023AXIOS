@@ -3,7 +3,7 @@ console.log('hello start fronend page');
 const tovar = document.querySelector('.tovar');
 
 const run = async () => {
-    const result = await axios.get('/profile/name?name=Андрій&age=40', {params: {a : 20}});
+    const result = await axios.get('/profile/name?name=Андрій&age=40');
     console.log('result>>>>', result);
 
     const arrayTovar = result.data.map((item) => {

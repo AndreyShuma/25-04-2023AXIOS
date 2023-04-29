@@ -3,8 +3,8 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/', (req, res) => {
-    console.log('req.params >>>>', req.params);
-    console.log('req.query >>>>', req.query);
+    // console.log('req.params >>>>', req.params);
+    // console.log('req.query >>>>', req.query);
     res.render('profileEJS');
 });
 
@@ -20,7 +20,8 @@ router.get('/name', (req, res) => {
 
     const arr = [...profile];
 
-    console.log('req.query.gender >>>>>', req.query.gender);
+    console.log('GET параметри для роутінгу >>>>> req.query.name >>>>>', req.query.name);
+    console.log('GET параметри для роутінгу >>>>> req.query.age >>>>>', req.query.age);
 
     if(req.query.gender) {
         let data = arr.filter( item => item.gender === req.query.gender);
@@ -33,9 +34,16 @@ router.get('/name', (req, res) => {
         return;
     }
 
-    res.json(profile);
+    // if(req.query.name && req.query.age) {
+    //     let data = arr.filter( (item) => ((item.name  === req.query.name ) && (item.age === req.query.age)));
+    //     res.json(data);
+    //     console.log('data >>>>>', data);
+    //     console.log('req.query.name', req.query.name);
+    //     console.log('req.query.age', req.query.age);
+    //     return;
+    // }
+
+     res.json(profile);
 });
 
 module.exports = router;
-
-// ?name=Andriy&age=38&gender=mail
